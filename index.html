@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="christmas-lights.svg">
+<title>Christmas Lights Game Offical Rules</title>
+
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "PT Sans", Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        color: whitesmoke;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        background-color: black;
+        min-height: 100vh;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    .bokeh-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .bokeh {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0.6;
+        filter: blur(8px);
+        animation: float 20s infinite ease-in-out;
+    }
+
+    .bokeh.red {
+        background: radial-gradient(circle, rgba(255, 50, 50, 0.8) 0%, rgba(255, 0, 0, 0.3) 40%, transparent 70%);
+        box-shadow: 0 0 40px rgba(255, 0, 0, 0.6);
+    }
+
+    .bokeh.green {
+        background: radial-gradient(circle, rgba(50, 255, 100, 0.8) 0%, rgba(0, 255, 50, 0.3) 40%, transparent 70%);
+        box-shadow: 0 0 40px rgba(0, 255, 50, 0.6);
+    }
+
+    .bokeh.blue {
+        background: radial-gradient(circle, rgba(100, 150, 255, 0.8) 0%, rgba(50, 100, 255, 0.3) 40%, transparent 70%);
+        box-shadow: 0 0 40px rgba(50, 100, 255, 0.6);
+    }
+
+    .bokeh.gold {
+        background: radial-gradient(circle, rgba(255, 215, 100, 0.8) 0%, rgba(255, 200, 50, 0.3) 40%, transparent 70%);
+        box-shadow: 0 0 40px rgba(255, 200, 50, 0.6);
+    }
+
+    .bokeh.white {
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.3) 40%, transparent 70%);
+        box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+    }
+
+    .bokeh.purple {
+        background: radial-gradient(circle, rgba(200, 100, 255, 0.8) 0%, rgba(150, 50, 255, 0.3) 40%, transparent 70%);
+        box-shadow: 0 0 40px rgba(150, 50, 255, 0.6);
+    }
+
+    .content {
+        position: relative;
+        z-index: 2;
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 60px 40px;
+        min-height: 100vh;
+        background-color: transparent;
+    }
+
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+    }
+
+    h2 {
+        font-size: 1.8em;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+    }
+
+    h3 {
+        font-size: 1.4em;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    p {
+        line-height: 1.8;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+    ul {
+        padding-left: 40px;
+        margin-top: 5px;
+    }
+
+    li {
+        margin-bottom: 5px;
+    }
+</style>
+</head>
+
+<body>
+<div class="bokeh-container" id="bokehContainer"></div>
+
+<div class="content">
+    <h1>Christmas Lights Game Offical Rules</h1>
+
+    <h2>Game Duration</h2>
+
+    <ul>
+    <li>The game cannot start before December 1st.</li>
+    <li>The game ends at midnight at the start of January 6th.</li>
+    <li>The game starts when any player starts the game and lasts until the game ends.</li>
+    </ul>
+
+    <h2>Game Location</h2>
+
+    <ul>
+    <li>The game can only be played from within a moving car.</li>
+    <li>A new round starts upon the start of a new journey.</li>
+    <li>The round ends when the engine is turned off at the end of the journey.</li>
+    <li>A journey can have multiple stages if the desired destination had not been reached when the engine is turned off, in which case the previous round continues on resumption of the journey.</li>
+    <li>No dispensation is given for better or worse seating locations in the car.</li>
+    </ul>
+
+    <h2>Scoring Points</h2>
+
+    <ul>
+    <li>A point is scored by the first person to lay a claim to a set of Christmas lights by shouting "Christmas lights" upon the first sighting of any set of Christmas lights.</li>
+    <li>Only the first person can earn a point for each set of Christmas lights. If more than one person simultaneously lays a claim, all people who shouted simultaneously earn a point.</li>
+    </ul>
+
+    <h2>Christmas Lights </h2>
+
+    <ul>
+    <li>Christmas lights are defined as any electrically lit lights that would be considered a Christmas decoration by any reasonable person.</li>
+    <li>
+        Examples of Christmas lights:
+        <ul>
+        <li>Lights on a Christmas tree</li>
+        <li>Fairy lights</li>
+        <li>Illumianted shapes (e.g. redindeers, presents)</li>
+        <li>Menorahs, lanterns, candles - must be electrically powered</li>
+        </ul>
+    </li>
+    <li>Christmas lights of any size count.</li>
+    <li>Any Christmas lights visible from the road count, even if internal to a property and viewed through a window.</li>
+    <li>Multiple Christmas lights on the same property count as part of the same "set" and only score one point.</li>
+    <li>Each set of Christmas lights can only be counted once per journey.</li>
+    </ul>
+
+    <h2>Challenging A Claim</h2>
+
+    <ul>
+    <li>Any player can challenge another player's claim if they feel it is invalid.</li>
+    <li>
+        Reasons for an invalid claim include:
+        <ul>
+        <li>Not Christmas lights - the lights claimed are normal lights and not associated with Christmas.</li>
+        <li>Permanent Christmas lights - the lights classify as Christmas lights but are normally there, and on, ouside of the game duration.</li>
+        <li>Duplicate claim - the lights have already been claimed in the current round.</li>
+        <li>Hint provided - someone else not involved in the game prompts a player to make a claim.</li>
+        </ul>
+    </li>
+    <li>A successful challenge results in the claim being voided and the claiming player not receiving a point.</li>
+    <li>A player is disqualified from the current round if they have two successful claims against them.</li>
+    </ul>
+
+    <h2>Winning The Game</h2>
+
+    <ul>
+    <li>The winner is the person with the most points at the end of the round.</li>
+    </ul>
+
+    <h2>"Shooting Fish In A Barrel" Pause</h2>
+
+    <ul>
+    <li>The game takes a pause when spotting Christmas lights becomes too easy.</li>
+    <li>The pause starts usually within a week of Christmas day.</li>
+    <li>The pause ends when people start to take down their Christmas lights, usually after January 1st.</li>
+    <li>The start and end of the pause can be suggested by any player, but must be agreed by all players.</li>
+    <li>The start and end of the pause do not need to be decided at the same time.</li>
+    </ul>
+</div>
+
+<script type="c31a614e345b21ed5e56ac75-text/javascript">
+    const container = document.getElementById('bokehContainer');
+    const colors = ['red', 'green', 'blue', 'gold', 'white', 'purple'];
+    const numLights = 100;
+
+    for (let i = 0; i < numLights; i++) {
+        const bokeh = document.createElement('div');
+        bokeh.className = `bokeh ${colors[Math.floor(Math.random() * colors.length)]}`;
+
+        // Random size between 40px and 150px
+        const size = Math.random() * 110 + 40;
+        bokeh.style.width = `${size}px`;
+        bokeh.style.height = `${size}px`;
+
+        // Random position
+        bokeh.style.left = `${Math.random() * 100}%`;
+        bokeh.style.top = `${Math.random() * 100}%`;
+
+        container.appendChild(bokeh);
+    }
+</script>
+
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="c31a614e345b21ed5e56ac75-|49" defer></script></body>
+</html>
